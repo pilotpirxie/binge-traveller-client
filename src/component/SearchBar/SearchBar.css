@@ -1,0 +1,27 @@
+.search-bar {
+    background: linear-gradient(0deg, rgba(172, 195, 145, 0.6), rgba(172, 195, 145, 0.6)), url(bg.jpg);
+}
+
+.search-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+    height: 140px;
+}
+
+input, select {
+    border: none!important;
+    font-weight: 600!important;
+    color: rgba(68, 68, 68, 1)!important;
+}
+
+input::placeholder, select::placeholder {
+    font-weight: 600;
+    color: rgba(68, 68, 68, 1)!important;
+}
+
+@media screen  and (max-width: 767px) {
+    .search-card {
+        margin: 4px 16px;
+    }
+}
