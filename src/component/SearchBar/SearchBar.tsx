@@ -1,6 +1,6 @@
 import React from "react";
 import "./SearchBar.css";
-import { Input } from "reactstrap";
+import { Badge, Button, Input } from "reactstrap";
 import Logo from "../Logo/Logo";
 
 function SearchBar() {
@@ -59,6 +59,28 @@ function SearchBar() {
               />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="row d-flex align-items-center justify-content-center mt-3">
+        <div className="col-12 col-md-8">
+          <Badge color="white" className="fs-6 text-black me-2">
+            Rzym [CIA]
+          </Badge>
+          <Badge color="white" className="fs-6 text-black me-2">
+            Barcelona [BCN]
+          </Badge>
+          <Badge color="white" className="fs-6 text-black me-2">
+            Londyn [STN]
+          </Badge>
+          <Badge color="white" className="fs-6 text-black me-2">
+            Marsylia [MRS]
+          </Badge>
+          <Badge color="white" className="fs-6 text-black me-2">
+            Praga [PRG]
+          </Badge>
+        </div>
+        <div className="col-12 col-md-2">
+          <Button className="search-button w-100 p-3">Szukaj 🔍</Button>
         </div>
       </div>
     </div>
