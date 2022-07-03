@@ -4,7 +4,7 @@ import SearchBar from "../SearchBar/SearchBar";
 
 function App() {
   return (
-    <div className="container-fluid p-0">
+    <div className="">
       <div>
         <SearchBar />
       </div>
