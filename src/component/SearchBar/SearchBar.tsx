@@ -21,9 +21,9 @@ function SearchBar() {
             <div className="col-12 col-md-2">
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
-                  <div className="mb-3">Miejsce wylotu 🛫</div>
-                  <Input type="select" placeholder="Wybierz">
-                    <option>Wybierz</option>
+                  <div className="mb-3">Departure 🛫</div>
+                  <Input type="select" placeholder="Select">
+                    <option>Select</option>
                   </Input>
                 </div>
               </div>
@@ -31,9 +31,9 @@ function SearchBar() {
             <div className="col-12 col-md-2">
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
-                  <div className="mb-3">Destynacja 🛬</div>
-                  <Input type="select" placeholder="Wybierz">
-                    <option>Wybierz</option>
+                  <div className="mb-3">Destination 🛬</div>
+                  <Input type="select" placeholder="Select">
+                    <option>Select</option>
                   </Input>
                 </div>
               </div>
@@ -41,23 +41,23 @@ function SearchBar() {
             <div className="col-12 col-md-2">
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
-                  <div className="mb-3">Szukaj od 📆</div>
-                  <Input type="date" placeholder="Wybierz" />
+                  <div className="mb-3">From date 📆</div>
+                  <Input type="date" placeholder="Select" />
                 </div>
               </div>
             </div>
             <div className="col-12 col-md-2">
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
-                  <div className="mb-3">Szukaj do 📆</div>
-                  <Input type="date" placeholder="Wybierz" />
+                  <div className="mb-3">To date 📆</div>
+                  <Input type="date" placeholder="Select" />
                 </div>
               </div>
             </div>
             <div className="col-12 col-md-2">
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
-                  <div className="mb-3">Długość pobytu 🌴</div>
+                  <div className="mb-3">Days of stay 🌴</div>
                   <Input
                     type="number"
                     placeholder="Wybierz"
@@ -78,7 +78,7 @@ function SearchBar() {
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
             >
-              Rzym [CIA]
+              Rome [CIA]
             </Badge>
             <Badge
               color="white"
@@ -90,23 +90,23 @@ function SearchBar() {
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
             >
-              Londyn [STN]
+              London [STN]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
             >
-              Marsylia [MRS]
+              Marseille [MRS]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
             >
-              Praga [PRG]
+              Prague [PRG]
             </Badge>
           </div>
           <div className="col-12 col-md-3">
-            <Button className="search-button w-100 p-3">Szukaj 🔍</Button>
+            <Button className="search-button w-100 p-3">Search 🔍</Button>
           </div>
         </div>
       </div>
