@@ -1,9 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SearchBar.css";
 import { Badge, Button, Input } from "reactstrap";
+import dayjs from "dayjs";
 import Logo from "../Logo/Logo";
 
-function SearchBar() {
+export type SearchParams = {
+  departureAirport: string;
+  dateTo: Date;
+  dateFrom: Date;
+  days: number;
+};
+
+export type SearchBarProps = {
+  onSearch: (params: SearchParams) => void;
+};
+
+function SearchBar({ onSearch }: SearchBarProps) {
+  const [departure, setDeparture] = useState("");
+  // const [destination, setDestination] = useState('');
+  const [dateFrom, setDateFrom] = useState(dayjs().format("YYYY-MM-DD"));
+  const [dateTo, setDateTo] = useState(
+    dayjs().add(2, "days").format("YYYY-MM-DD")
+  );
+  const [days, setDays] = useState(1);
+
+  const handleSearchClick = () => {
+    onSearch({
+      days,
+      dateFrom: dayjs(dateFrom).toDate(),
+      dateTo: dayjs(dateTo).toDate(),
+      departureAirport: departure,
+    });
+  };
+
   return (
     <div className="search-bar py-5">
       <div className="container">
@@ -22,8 +51,17 @@ function SearchBar() {
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
                   <div className="mb-3">Departure 🛫</div>
-                  <Input type="select" placeholder="Select">
-                    <option>Select</option>
+                  <Input
+                    value={departure}
+                    onChange={(e) => {
+                      setDeparture(e.currentTarget.value);
+                    }}
+                    type="select"
+                    placeholder="Select"
+                  >
+                    <option value="">Select</option>
+                    <option value="WMI">Warsaw Modlin WMI</option>
+                    <option value="KRK">Cracow KRK</option>
                   </Input>
                 </div>
               </div>
@@ -42,7 +80,16 @@ function SearchBar() {
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
                   <div className="mb-3">From date 📆</div>
-                  <Input type="date" placeholder="Select" />
+                  <Input
+                    type="date"
+                    placeholder="Select"
+                    value={dateFrom}
+                    onChange={(e) =>
+                      setDateFrom(
+                        dayjs(e.currentTarget.value).format("YYYY-MM-DD")
+                      )
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -50,7 +97,16 @@ function SearchBar() {
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
                   <div className="mb-3">To date 📆</div>
-                  <Input type="date" placeholder="Select" />
+                  <Input
+                    type="date"
+                    placeholder="Select"
+                    value={dateTo}
+                    onChange={(e) =>
+                      setDateTo(
+                        dayjs(e.currentTarget.value).format("YYYY-MM-DD")
+                      )
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -64,6 +120,8 @@ function SearchBar() {
                     min={1}
                     max={60}
                     step={1}
+                    value={days}
+                    onChange={(e) => setDays(+e.currentTarget.value)}
                   />
                 </div>
               </div>
@@ -106,7 +164,12 @@ function SearchBar() {
             </Badge>
           </div>
           <div className="col-12 col-md-3">
-            <Button className="search-button w-100 p-3">Search 🔍</Button>
+            <Button
+              className="search-button w-100 p-3"
+              onClick={handleSearchClick}
+            >
+              Search 🔍
+            </Button>
           </div>
         </div>
       </div>
