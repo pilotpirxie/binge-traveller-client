@@ -5,7 +5,8 @@ import dayjs from "dayjs";
 import Logo from "../Logo/Logo";
 
 export type SearchParams = {
-  departureAirport: string;
+  originAirport: string;
+  destinationAirport: string;
   dateTo: Date;
   dateFrom: Date;
   days: number;
@@ -17,7 +18,7 @@ export type SearchBarProps = {
 
 function SearchBar({ onSearch }: SearchBarProps) {
   const [departure, setDeparture] = useState("");
-  // const [destination, setDestination] = useState('');
+  const [destination, setDestination] = useState("");
   const [dateFrom, setDateFrom] = useState(dayjs().format("YYYY-MM-DD"));
   const [dateTo, setDateTo] = useState(
     dayjs().add(2, "days").format("YYYY-MM-DD")
@@ -29,7 +30,8 @@ function SearchBar({ onSearch }: SearchBarProps) {
       days,
       dateFrom: dayjs(dateFrom).toDate(),
       dateTo: dayjs(dateTo).toDate(),
-      departureAirport: departure,
+      originAirport: departure,
+      destinationAirport: destination,
     });
   };
 
@@ -60,8 +62,8 @@ function SearchBar({ onSearch }: SearchBarProps) {
                     placeholder="Select"
                   >
                     <option value="">Select</option>
-                    <option value="WMI">Warsaw Modlin WMI</option>
-                    <option value="KRK">Cracow KRK</option>
+                    <option value="WMI">Warsaw Modlin [WMI]</option>
+                    <option value="KRK">Cracow [KRK]</option>
                   </Input>
                 </div>
               </div>
@@ -70,8 +72,16 @@ function SearchBar({ onSearch }: SearchBarProps) {
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
                   <div className="mb-3">Destination 🛬</div>
-                  <Input type="select" placeholder="Select">
-                    <option>Select</option>
+                  <Input
+                    value={destination}
+                    onChange={(e) => {
+                      setDestination(e.currentTarget.value);
+                    }}
+                    type="select"
+                    placeholder="Select"
+                  >
+                    <option value="">Select</option>
+                    <option value="BCN">Barcelona [BCN]</option>
                   </Input>
                 </div>
               </div>
