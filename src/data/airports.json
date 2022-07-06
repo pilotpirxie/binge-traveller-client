@@ -1,0 +1,1726 @@
+[
+  {
+    "country": {
+      "name": "Austria"
+    },
+    "code": "KLU",
+    "name": "Klagenfurt"
+  },
+  {
+    "country": {
+      "name": "Austria"
+    },
+    "code": "SZG",
+    "name": "Salzburg"
+  },
+  {
+    "country": {
+      "name": "Austria"
+    },
+    "code": "VIE",
+    "name": "Vienna"
+  },
+  {
+    "country": {
+      "name": "Belgium"
+    },
+    "code": "BRU",
+    "name": "Brussels",
+    "macCity": {
+      "code": "BRUSSELS"
+    }
+  },
+  {
+    "country": {
+      "name": "Belgium"
+    },
+    "code": "CRL",
+    "name": "Brussels Charleroi",
+    "macCity": {
+      "code": "BRUSSELS"
+    }
+  },
+  {
+    "country": {
+      "name": "Bosnia & Herzegovina"
+    },
+    "code": "BNX",
+    "name": "Banja Luka"
+  },
+  {
+    "country": {
+      "name": "Bosnia & Herzegovina"
+    },
+    "code": "TZL",
+    "name": "Tuzla"
+  },
+  {
+    "country": {
+      "name": "Bulgaria"
+    },
+    "code": "BOJ",
+    "name": "Burgas"
+  },
+  {
+    "country": {
+      "name": "Bulgaria"
+    },
+    "code": "PDV",
+    "name": "Plovdiv"
+  },
+  {
+    "country": {
+      "name": "Bulgaria"
+    },
+    "code": "SOF",
+    "name": "Sofia"
+  },
+  {
+    "country": {
+      "name": "Bulgaria"
+    },
+    "code": "VAR",
+    "name": "Varna"
+  },
+  {
+    "country": {
+      "name": "Croatia"
+    },
+    "code": "DBV",
+    "name": "Dubrovnik"
+  },
+  {
+    "country": {
+      "name": "Croatia"
+    },
+    "code": "PUY",
+    "name": "Pula"
+  },
+  {
+    "country": {
+      "name": "Croatia"
+    },
+    "code": "RJK",
+    "name": "Rijeka"
+  },
+  {
+    "country": {
+      "name": "Croatia"
+    },
+    "code": "SPU",
+    "name": "Split"
+  },
+  {
+    "country": {
+      "name": "Croatia"
+    },
+    "code": "ZAD",
+    "name": "Zadar"
+  },
+  {
+    "country": {
+      "name": "Croatia"
+    },
+    "code": "ZAG",
+    "name": "Zagreb"
+  },
+  {
+    "country": {
+      "name": "Cyprus"
+    },
+    "code": "LCA",
+    "name": "Larnaca"
+  },
+  {
+    "country": {
+      "name": "Cyprus"
+    },
+    "code": "PFO",
+    "name": "Paphos"
+  },
+  {
+    "country": {
+      "name": "Czech Republic"
+    },
+    "code": "BRQ",
+    "name": "Brno"
+  },
+  {
+    "country": {
+      "name": "Czech Republic"
+    },
+    "code": "OSR",
+    "name": "Ostrava"
+  },
+  {
+    "country": {
+      "name": "Czech Republic"
+    },
+    "code": "PED",
+    "name": "Pardubice"
+  },
+  {
+    "country": {
+      "name": "Czech Republic"
+    },
+    "code": "PRG",
+    "name": "Prague"
+  },
+  {
+    "country": {
+      "name": "Denmark"
+    },
+    "code": "AAL",
+    "name": "Aalborg"
+  },
+  {
+    "country": {
+      "name": "Denmark"
+    },
+    "code": "AAR",
+    "name": "Aarhus"
+  },
+  {
+    "country": {
+      "name": "Denmark"
+    },
+    "code": "BLL",
+    "name": "Billund"
+  },
+  {
+    "country": {
+      "name": "Denmark"
+    },
+    "code": "CPH",
+    "name": "Copenhagen"
+  },
+  {
+    "country": {
+      "name": "Estonia"
+    },
+    "code": "TLL",
+    "name": "Tallinn"
+  },
+  {
+    "country": {
+      "name": "Finland"
+    },
+    "code": "HEL",
+    "name": "Helsinki"
+  },
+  {
+    "country": {
+      "name": "Finland"
+    },
+    "code": "LPP",
+    "name": "Lappeenranta"
+  },
+  {
+    "country": {
+      "name": "Finland"
+    },
+    "code": "RVN",
+    "name": "Lapland Rovaniemi"
+  },
+  {
+    "country": {
+      "name": "Finland"
+    },
+    "code": "TMP",
+    "name": "Tampere"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "BIQ",
+    "name": "Biarritz"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "BOD",
+    "name": "Bordeaux"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "BVA",
+    "name": "Paris Beauvais",
+    "macCity": {
+      "code": "PARIS"
+    }
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "BVE",
+    "name": "Brive"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "BZR",
+    "name": "Beziers"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "CCF",
+    "name": "Carcassonne"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "CFE",
+    "name": "Clermont"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "DLE",
+    "name": "Dole"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "EGC",
+    "name": "Bergerac"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "FNI",
+    "name": "Nimes"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "FSC",
+    "name": "Figari"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "GNB",
+    "name": "Grenoble"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "LDE",
+    "name": "Lourdes"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "LIG",
+    "name": "Limoges"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "LIL",
+    "name": "Lille"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "LRH",
+    "name": "La Rochelle"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "MRS",
+    "name": "Marseille"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "NCE",
+    "name": "Nice"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "NTE",
+    "name": "Nantes"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "PGF",
+    "name": "Perpignan"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "PIS",
+    "name": "Poitiers"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "RDZ",
+    "name": "Rodez"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "SXB",
+    "name": "Strasbourg"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "TLS",
+    "name": "Toulouse"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "TUF",
+    "name": "Tours Loire Valley"
+  },
+  {
+    "country": {
+      "name": "France"
+    },
+    "code": "XCR",
+    "name": "Paris Vatry",
+    "macCity": {
+      "code": "PARIS"
+    }
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "BER",
+    "name": "Berlin Brandenburg",
+    "macCity": {
+      "code": "BERLIN"
+    }
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "BRE",
+    "name": "Bremen"
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "CGN",
+    "name": "Cologne"
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "DRS",
+    "name": "Dresden"
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "DTM",
+    "name": "Dortmund"
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "FKB",
+    "name": "Karlsruhe / Baden-Baden"
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "FMM",
+    "name": "Memmingen"
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "FMO",
+    "name": "Münster"
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "HAM",
+    "name": "Hamburg"
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "HHN",
+    "name": "Frankfurt Hahn",
+    "macCity": {
+      "code": "FRANKFURT"
+    }
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "LEJ",
+    "name": "Leipzig"
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "NRN",
+    "name": "Dusseldorf Weeze",
+    "macCity": {
+      "code": "DUSSELDORF"
+    }
+  },
+  {
+    "country": {
+      "name": "Germany"
+    },
+    "code": "NUE",
+    "name": "Nuremberg"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "ATH",
+    "name": "Athens"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "CFU",
+    "name": "Corfu"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "CHQ",
+    "name": "Chania"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "EFL",
+    "name": "Kefalonia"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "HER",
+    "name": "Heraklion Crete"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "JMK",
+    "name": "Mykonos"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "JSI",
+    "name": "Skiathos"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "JTR",
+    "name": "Santorini"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "KGS",
+    "name": "Kos"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "KLX",
+    "name": "Kalamata"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "PVK",
+    "name": "Preveza - Aktion"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "RHO",
+    "name": "Rhodes"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "SKG",
+    "name": "Thessaloniki"
+  },
+  {
+    "country": {
+      "name": "Greece"
+    },
+    "code": "ZTH",
+    "name": "Zakynthos"
+  },
+  {
+    "country": {
+      "name": "Hungary"
+    },
+    "code": "BUD",
+    "name": "Budapest"
+  },
+  {
+    "country": {
+      "name": "Ireland"
+    },
+    "code": "DUB",
+    "name": "Dublin"
+  },
+  {
+    "country": {
+      "name": "Ireland"
+    },
+    "code": "KIR",
+    "name": "Kerry"
+  },
+  {
+    "country": {
+      "name": "Ireland"
+    },
+    "code": "NOC",
+    "name": "Knock"
+  },
+  {
+    "country": {
+      "name": "Ireland"
+    },
+    "code": "ORK",
+    "name": "Cork"
+  },
+  {
+    "country": {
+      "name": "Ireland"
+    },
+    "code": "SNN",
+    "name": "Shannon"
+  },
+  {
+    "country": {
+      "name": "Israel"
+    },
+    "code": "TLV",
+    "name": "Tel Aviv"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "AHO",
+    "name": "Alghero"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "AOI",
+    "name": "Ancona"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "BDS",
+    "name": "Brindisi"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "BGY",
+    "name": "Milan Bergamo",
+    "macCity": {
+      "code": "MILAN"
+    }
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "BLQ",
+    "name": "Bologna"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "BRI",
+    "name": "Bari"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "CAG",
+    "name": "Cagliari"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "CIA",
+    "name": "Rome Ciampino",
+    "macCity": {
+      "code": "ROME"
+    }
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "CIY",
+    "name": "Comiso"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "CRV",
+    "name": "Crotone"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "CTA",
+    "name": "Catania"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "CUF",
+    "name": "Cuneo"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "FCO",
+    "name": "Rome Fiumicino",
+    "macCity": {
+      "code": "ROME"
+    }
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "GOA",
+    "name": "Genoa"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "MXP",
+    "name": "Milan Malpensa",
+    "macCity": {
+      "code": "MILAN"
+    }
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "NAP",
+    "name": "Naples"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "PEG",
+    "name": "Perugia"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "PMF",
+    "name": "Parma"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "PMO",
+    "name": "Palermo"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "PSA",
+    "name": "Pisa"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "PSR",
+    "name": "Pescara"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "RMI",
+    "name": "Rimini"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "SUF",
+    "name": "Lamezia"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "TPS",
+    "name": "Trapani"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "TRN",
+    "name": "Turin"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "TRS",
+    "name": "Trieste"
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "TSF",
+    "name": "Venice Treviso",
+    "macCity": {
+      "code": "VENICE"
+    }
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "VCE",
+    "name": "Venice M.Polo",
+    "macCity": {
+      "code": "VENICE"
+    }
+  },
+  {
+    "country": {
+      "name": "Italy"
+    },
+    "code": "VRN",
+    "name": "Verona"
+  },
+  {
+    "country": {
+      "name": "Jordan"
+    },
+    "code": "AMM",
+    "name": "Amman Jordan",
+    "macCity": {
+      "code": "AMMAN"
+    }
+  },
+  {
+    "country": {
+      "name": "Jordan"
+    },
+    "code": "AQJ",
+    "name": "Aqaba Jordan",
+    "macCity": {
+      "code": "AMMAN"
+    }
+  },
+  {
+    "country": {
+      "name": "Latvia"
+    },
+    "code": "RIX",
+    "name": "Riga"
+  },
+  {
+    "country": {
+      "name": "Lithuania"
+    },
+    "code": "KUN",
+    "name": "Kaunas"
+  },
+  {
+    "country": {
+      "name": "Lithuania"
+    },
+    "code": "PLQ",
+    "name": "Palanga"
+  },
+  {
+    "country": {
+      "name": "Lithuania"
+    },
+    "code": "VNO",
+    "name": "Vilnius"
+  },
+  {
+    "country": {
+      "name": "Luxembourg"
+    },
+    "code": "LUX",
+    "name": "Luxembourg"
+  },
+  {
+    "country": {
+      "name": "Malta"
+    },
+    "code": "MLA",
+    "name": "Malta"
+  },
+  {
+    "country": {
+      "name": "Montenegro"
+    },
+    "code": "TGD",
+    "name": "Podgorica"
+  },
+  {
+    "country": {
+      "name": "Morocco"
+    },
+    "code": "AGA",
+    "name": "Agadir"
+  },
+  {
+    "country": {
+      "name": "Morocco"
+    },
+    "code": "ESU",
+    "name": "Essaouira"
+  },
+  {
+    "country": {
+      "name": "Morocco"
+    },
+    "code": "FEZ",
+    "name": "Fez"
+  },
+  {
+    "country": {
+      "name": "Morocco"
+    },
+    "code": "NDR",
+    "name": "Nador"
+  },
+  {
+    "country": {
+      "name": "Morocco"
+    },
+    "code": "OUD",
+    "name": "Oujda"
+  },
+  {
+    "country": {
+      "name": "Morocco"
+    },
+    "code": "OZZ",
+    "name": "Ouarzazate"
+  },
+  {
+    "country": {
+      "name": "Morocco"
+    },
+    "code": "RAK",
+    "name": "Marrakesh"
+  },
+  {
+    "country": {
+      "name": "Morocco"
+    },
+    "code": "RBA",
+    "name": "Rabat"
+  },
+  {
+    "country": {
+      "name": "Morocco"
+    },
+    "code": "TNG",
+    "name": "Tangier"
+  },
+  {
+    "country": {
+      "name": "Morocco"
+    },
+    "code": "TTU",
+    "name": "Tétouan"
+  },
+  {
+    "country": {
+      "name": "Netherlands"
+    },
+    "code": "AMS",
+    "name": "Amsterdam"
+  },
+  {
+    "country": {
+      "name": "Netherlands"
+    },
+    "code": "EIN",
+    "name": "Eindhoven"
+  },
+  {
+    "country": {
+      "name": "Netherlands"
+    },
+    "code": "MST",
+    "name": "Maastricht"
+  },
+  {
+    "country": {
+      "name": "Norway"
+    },
+    "code": "HAU",
+    "name": "Haugesund"
+  },
+  {
+    "country": {
+      "name": "Norway"
+    },
+    "code": "OSL",
+    "name": "Oslo",
+    "macCity": {
+      "code": "OSLO"
+    }
+  },
+  {
+    "country": {
+      "name": "Norway"
+    },
+    "code": "TRF",
+    "name": "Oslo Torp",
+    "macCity": {
+      "code": "OSLO"
+    }
+  },
+  {
+    "country": {
+      "name": "Poland"
+    },
+    "code": "BZG",
+    "name": "Bydgoszcz"
+  },
+  {
+    "country": {
+      "name": "Poland"
+    },
+    "code": "GDN",
+    "name": "Gdansk"
+  },
+  {
+    "country": {
+      "name": "Poland"
+    },
+    "code": "KRK",
+    "name": "Krakow"
+  },
+  {
+    "country": {
+      "name": "Poland"
+    },
+    "code": "KTW",
+    "name": "Katowice"
+  },
+  {
+    "country": {
+      "name": "Poland"
+    },
+    "code": "LCJ",
+    "name": "Lodz"
+  },
+  {
+    "country": {
+      "name": "Poland"
+    },
+    "code": "LUZ",
+    "name": "Lublin"
+  },
+  {
+    "country": {
+      "name": "Poland"
+    },
+    "code": "POZ",
+    "name": "Poznan"
+  },
+  {
+    "country": {
+      "name": "Poland"
+    },
+    "code": "RZE",
+    "name": "Rzeszow"
+  },
+  {
+    "country": {
+      "name": "Poland"
+    },
+    "code": "SZY",
+    "name": "Olsztyn - Mazury"
+  },
+  {
+    "country": {
+      "name": "Poland"
+    },
+    "code": "SZZ",
+    "name": "Szczecin"
+  },
+  {
+    "country": {
+      "name": "Poland"
+    },
+    "code": "WMI",
+    "name": "Warsaw Modlin"
+  },
+  {
+    "country": {
+      "name": "Poland"
+    },
+    "code": "WRO",
+    "name": "Wroclaw"
+  },
+  {
+    "country": {
+      "name": "Portugal"
+    },
+    "code": "FAO",
+    "name": "Faro"
+  },
+  {
+    "country": {
+      "name": "Portugal"
+    },
+    "code": "FNC",
+    "name": "Madeira Funchal"
+  },
+  {
+    "country": {
+      "name": "Portugal"
+    },
+    "code": "LIS",
+    "name": "Lisbon"
+  },
+  {
+    "country": {
+      "name": "Portugal"
+    },
+    "code": "OPO",
+    "name": "Porto"
+  },
+  {
+    "country": {
+      "name": "Portugal"
+    },
+    "code": "PDL",
+    "name": "Ponta Delgada"
+  },
+  {
+    "country": {
+      "name": "Portugal"
+    },
+    "code": "TER",
+    "name": "Terceira Lajes"
+  },
+  {
+    "country": {
+      "name": "Romania"
+    },
+    "code": "CLJ",
+    "name": "Cluj"
+  },
+  {
+    "country": {
+      "name": "Romania"
+    },
+    "code": "OMR",
+    "name": "Oradea"
+  },
+  {
+    "country": {
+      "name": "Romania"
+    },
+    "code": "OTP",
+    "name": "Bucharest"
+  },
+  {
+    "country": {
+      "name": "Romania"
+    },
+    "code": "SBZ",
+    "name": "Sibiu"
+  },
+  {
+    "country": {
+      "name": "Romania"
+    },
+    "code": "SCV",
+    "name": "Suceava"
+  },
+  {
+    "country": {
+      "name": "Romania"
+    },
+    "code": "TSR",
+    "name": "Timisoara"
+  },
+  {
+    "country": {
+      "name": "Serbia"
+    },
+    "code": "INI",
+    "name": "Nis"
+  },
+  {
+    "country": {
+      "name": "Slovakia"
+    },
+    "code": "BTS",
+    "name": "Bratislava"
+  },
+  {
+    "country": {
+      "name": "Slovakia"
+    },
+    "code": "KSC",
+    "name": "Kosice"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "ACE",
+    "name": "Lanzarote"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "AGP",
+    "name": "Malaga"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "ALC",
+    "name": "Alicante"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "BCN",
+    "name": "Barcelona",
+    "macCity": {
+      "code": "BARCELONA"
+    }
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "CDT",
+    "name": "Castellon (Valencia)",
+    "macCity": {
+      "code": "VALENCIA"
+    }
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "FUE",
+    "name": "Fuerteventura"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "GRO",
+    "name": "Barcelona Girona",
+    "macCity": {
+      "code": "BARCELONA"
+    }
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "IBZ",
+    "name": "Ibiza"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "LEI",
+    "name": "Almeria"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "LPA",
+    "name": "Gran Canaria"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "MAD",
+    "name": "Madrid"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "MAH",
+    "name": "Menorca"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "OVD",
+    "name": "Asturias"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "PMI",
+    "name": "Palma de Mallorca"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "REU",
+    "name": "Barcelona Reus",
+    "macCity": {
+      "code": "BARCELONA"
+    }
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "RMU",
+    "name": "Murcia International"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "SCQ",
+    "name": "Santiago"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "SDR",
+    "name": "Santander"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "SPC",
+    "name": "La Palma"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "SVQ",
+    "name": "Seville"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "TFN",
+    "name": "Tenerife North",
+    "macCity": {
+      "code": "TENERIFE"
+    }
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "TFS",
+    "name": "Tenerife South",
+    "macCity": {
+      "code": "TENERIFE"
+    }
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "VGO",
+    "name": "Vigo"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "VIT",
+    "name": "Vitoria (Basque Country)"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "VLC",
+    "name": "Valencia",
+    "macCity": {
+      "code": "VALENCIA"
+    }
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "VLL",
+    "name": "Valladolid"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "XRY",
+    "name": "Jerez"
+  },
+  {
+    "country": {
+      "name": "Spain"
+    },
+    "code": "ZAZ",
+    "name": "Zaragoza"
+  },
+  {
+    "country": {
+      "name": "Sweden"
+    },
+    "code": "ARN",
+    "name": "Stockholm Arlanda",
+    "macCity": {
+      "code": "STOCKHOLM"
+    }
+  },
+  {
+    "country": {
+      "name": "Sweden"
+    },
+    "code": "GOT",
+    "name": "Göteborg Landvetter"
+  },
+  {
+    "country": {
+      "name": "Sweden"
+    },
+    "code": "LLA",
+    "name": "Lulea"
+  },
+  {
+    "country": {
+      "name": "Sweden"
+    },
+    "code": "MMX",
+    "name": "Malmo"
+  },
+  {
+    "country": {
+      "name": "Sweden"
+    },
+    "code": "ORB",
+    "name": "Orebro"
+  },
+  {
+    "country": {
+      "name": "Sweden"
+    },
+    "code": "SFT",
+    "name": "Skelleftea"
+  },
+  {
+    "country": {
+      "name": "Sweden"
+    },
+    "code": "VBY",
+    "name": "Visby Gotland"
+  },
+  {
+    "country": {
+      "name": "Sweden"
+    },
+    "code": "VST",
+    "name": "Stockholm Västerås",
+    "macCity": {
+      "code": "STOCKHOLM"
+    }
+  },
+  {
+    "country": {
+      "name": "Sweden"
+    },
+    "code": "VXO",
+    "name": "Växjö Småland"
+  },
+  {
+    "country": {
+      "name": "Switzerland"
+    },
+    "code": "BSL",
+    "name": "Basel"
+  },
+  {
+    "country": {
+      "name": "Turkey"
+    },
+    "code": "BJV",
+    "name": "Bodrum"
+  },
+  {
+    "country": {
+      "name": "Turkey"
+    },
+    "code": "DLM",
+    "name": "Dalaman"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "ABZ",
+    "name": "Aberdeen"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "BHX",
+    "name": "Birmingham"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "BOH",
+    "name": "Bournemouth"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "BRS",
+    "name": "Bristol"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "CWL",
+    "name": "Cardiff"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "EDI",
+    "name": "Edinburgh"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "EMA",
+    "name": "East Midlands"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "EXT",
+    "name": "Exeter"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "GLA",
+    "name": "Glasgow",
+    "macCity": {
+      "code": "GLASGOW"
+    }
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "LBA",
+    "name": "Leeds Bradford"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "LDY",
+    "name": "Derry"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "LGW",
+    "name": "London Gatwick",
+    "macCity": {
+      "code": "LONDON"
+    }
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "LPL",
+    "name": "Liverpool"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "LTN",
+    "name": "London Luton",
+    "macCity": {
+      "code": "LONDON"
+    }
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "MAN",
+    "name": "Manchester"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "MME",
+    "name": "Teesside"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "NCL",
+    "name": "Newcastle"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "NQY",
+    "name": "Newquay Cornwall"
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "PIK",
+    "name": "Glasgow Prestwick",
+    "macCity": {
+      "code": "GLASGOW"
+    }
+  },
+  {
+    "country": {
+      "name": "United Kingdom"
+    },
+    "code": "STN",
+    "name": "London Stansted",
+    "macCity": {
+      "code": "LONDON"
+    }
+  }
+]

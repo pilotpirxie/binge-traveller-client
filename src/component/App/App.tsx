@@ -23,7 +23,7 @@ function App() {
     setTrips([]);
 
     await axios
-      .post<Trip[]>("http://localhost:3001/search", searchParams)
+      .post<Trip[]>("/search", searchParams)
       .then((res) => {
         setTrips(res.data);
         setSearchState(SearchState.SUCCESS);

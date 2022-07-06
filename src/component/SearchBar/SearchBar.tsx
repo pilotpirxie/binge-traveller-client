@@ -3,6 +3,7 @@ import "./SearchBar.css";
 import { Badge, Button, Input } from "reactstrap";
 import dayjs from "dayjs";
 import Logo from "../Logo/Logo";
+import airports from "../../data/airports.json";
 
 export type SearchParams = {
   originAirport: string;
@@ -62,8 +63,11 @@ function SearchBar({ onSearch }: SearchBarProps) {
                     placeholder="Select"
                   >
                     <option value="">Select</option>
-                    <option value="WMI">Warsaw Modlin [WMI]</option>
-                    <option value="KRK">Cracow [KRK]</option>
+                    {airports.map((airport) => (
+                      <option value={airport.code}>
+                        {airport.name} - {airport.country.name} [{airport.code}]
+                      </option>
+                    ))}
                   </Input>
                 </div>
               </div>
@@ -81,7 +85,11 @@ function SearchBar({ onSearch }: SearchBarProps) {
                     placeholder="Select"
                   >
                     <option value="">Select</option>
-                    <option value="BCN">Barcelona [BCN]</option>
+                    {airports.map((airport) => (
+                      <option value={airport.code}>
+                        {airport.name} - {airport.country.name} [{airport.code}]
+                      </option>
+                    ))}
                   </Input>
                 </div>
               </div>
@@ -94,6 +102,7 @@ function SearchBar({ onSearch }: SearchBarProps) {
                     type="date"
                     placeholder="Select"
                     value={dateFrom}
+                    min={dayjs().format("YYYY-MM-DD")}
                     onChange={(e) =>
                       setDateFrom(
                         dayjs(e.currentTarget.value).format("YYYY-MM-DD")
@@ -111,6 +120,7 @@ function SearchBar({ onSearch }: SearchBarProps) {
                     type="date"
                     placeholder="Select"
                     value={dateTo}
+                    min={dayjs(dateFrom).format("YYYY-MM-DD")}
                     onChange={(e) =>
                       setDateTo(
                         dayjs(e.currentTarget.value).format("YYYY-MM-DD")
@@ -145,30 +155,35 @@ function SearchBar({ onSearch }: SearchBarProps) {
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
+              onClick={() => setDestination("CIA")}
             >
               Rome [CIA]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
+              onClick={() => setDestination("BCN")}
             >
               Barcelona [BCN]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
+              onClick={() => setDestination("STN")}
             >
               London [STN]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
+              onClick={() => setDestination("MRS")}
             >
               Marseille [MRS]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
+              onClick={() => setDestination("PRG")}
             >
               Prague [PRG]
             </Badge>
