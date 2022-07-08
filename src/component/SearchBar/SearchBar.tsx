@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
-import { Badge, Button, Input } from "reactstrap";
+import { Badge, Button } from "reactstrap";
 import dayjs from "dayjs";
+import { MultiSelect } from "primereact/multiselect";
+import { Calendar } from "primereact/calendar";
+import { InputNumber } from "primereact/inputnumber";
 import Logo from "../Logo/Logo";
 import airports from "../../data/airports.json";
+import flags from "../../data/flags.json";
 
 export type SearchParams = {
-  originAirport: string;
-  destinationAirport: string;
-  dateTo: Date;
+  originAirport: Array<string>;
+  destinationAirport: Array<string>;
   dateFrom: Date;
+  dateTo: Date;
   days: number;
 };
 
@@ -18,23 +22,28 @@ export type SearchBarProps = {
 };
 
 function SearchBar({ onSearch }: SearchBarProps) {
-  const [departure, setDeparture] = useState("");
-  const [destination, setDestination] = useState("");
-  const [dateFrom, setDateFrom] = useState(dayjs().format("YYYY-MM-DD"));
-  const [dateTo, setDateTo] = useState(
-    dayjs().add(2, "days").format("YYYY-MM-DD")
-  );
+  const [departure, setDeparture] = useState<Array<string>>([]);
+  const [destination, setDestination] = useState<Array<string>>([]);
+  const [dateFrom, setDateFrom] = useState<Date>(dayjs().toDate());
+  const [dateTo, setDateTo] = useState<Date>(dayjs().add(1, "day").toDate());
   const [days, setDays] = useState(1);
 
   const handleSearchClick = () => {
     onSearch({
       days,
-      dateFrom: dayjs(dateFrom).toDate(),
-      dateTo: dayjs(dateTo).toDate(),
+      dateFrom,
+      dateTo,
       originAirport: departure,
       destinationAirport: destination,
     });
   };
+
+  const airportsItems = airports.map((airport) => ({
+    label: `${
+      flags.find((flag) => flag.name === airport.country.name)?.emoji || ""
+    } ${airport.name} [${airport.code}] ${airport.country.name}`,
+    value: airport.code,
+  }));
 
   return (
     <div className="search-bar py-5">
@@ -54,21 +63,20 @@ function SearchBar({ onSearch }: SearchBarProps) {
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
                   <div className="mb-3">Departure 🛫</div>
-                  <Input
+                  <MultiSelect
                     value={departure}
+                    options={airportsItems}
                     onChange={(e) => {
-                      setDeparture(e.currentTarget.value);
+                      setDeparture(e.value);
                     }}
-                    type="select"
                     placeholder="Select"
-                  >
-                    <option value="">Select</option>
-                    {airports.map((airport) => (
-                      <option value={airport.code}>
-                        {airport.name} - {airport.country.name} [{airport.code}]
-                      </option>
-                    ))}
-                  </Input>
+                    display="chip"
+                    filter
+                    selectionLimit={3}
+                    showSelectAll={false}
+                    className="w-100 border-0"
+                    filterPlaceholder="Search for departure airport"
+                  />
                 </div>
               </div>
             </div>
@@ -76,21 +84,20 @@ function SearchBar({ onSearch }: SearchBarProps) {
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
                   <div className="mb-3">Destination 🛬</div>
-                  <Input
+                  <MultiSelect
                     value={destination}
+                    options={airportsItems}
                     onChange={(e) => {
-                      setDestination(e.currentTarget.value);
+                      setDestination(e.value);
                     }}
-                    type="select"
-                    placeholder="Select"
-                  >
-                    <option value="">Select</option>
-                    {airports.map((airport) => (
-                      <option value={airport.code}>
-                        {airport.name} - {airport.country.name} [{airport.code}]
-                      </option>
-                    ))}
-                  </Input>
+                    placeholder="Optional"
+                    display="chip"
+                    filter
+                    selectionLimit={3}
+                    showSelectAll={false}
+                    className="w-100 border-0"
+                    filterPlaceholder="Search for destination airport"
+                  />
                 </div>
               </div>
             </div>
@@ -98,16 +105,15 @@ function SearchBar({ onSearch }: SearchBarProps) {
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
                   <div className="mb-3">From date 📆</div>
-                  <Input
-                    type="date"
+                  <Calendar
                     placeholder="Select"
                     value={dateFrom}
-                    min={dayjs().format("YYYY-MM-DD")}
-                    onChange={(e) =>
-                      setDateFrom(
-                        dayjs(e.currentTarget.value).format("YYYY-MM-DD")
-                      )
-                    }
+                    minDate={dayjs().toDate()}
+                    maxDate={dayjs().add(1, "year").toDate()}
+                    required
+                    selectionMode="single"
+                    dateFormat="yy-mm-dd"
+                    onChange={(e) => setDateFrom(e.value as Date)}
                   />
                 </div>
               </div>
@@ -116,16 +122,15 @@ function SearchBar({ onSearch }: SearchBarProps) {
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
                   <div className="mb-3">To date 📆</div>
-                  <Input
-                    type="date"
+                  <Calendar
                     placeholder="Select"
                     value={dateTo}
-                    min={dayjs(dateFrom).format("YYYY-MM-DD")}
-                    onChange={(e) =>
-                      setDateTo(
-                        dayjs(e.currentTarget.value).format("YYYY-MM-DD")
-                      )
-                    }
+                    minDate={dayjs().toDate()}
+                    maxDate={dayjs().add(1, "year").toDate()}
+                    required
+                    selectionMode="single"
+                    dateFormat="yy-mm-dd"
+                    onChange={(e) => setDateTo(e.value as Date)}
                   />
                 </div>
               </div>
@@ -134,14 +139,18 @@ function SearchBar({ onSearch }: SearchBarProps) {
               <div className="card search-card">
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
                   <div className="mb-3">Days of stay 🌴</div>
-                  <Input
-                    type="number"
-                    placeholder="Wybierz"
-                    min={1}
-                    max={60}
+                  <InputNumber
+                    placeholder="Select"
+                    min={0}
+                    max={365}
                     step={1}
                     value={days}
-                    onChange={(e) => setDays(+e.currentTarget.value)}
+                    required
+                    onChange={(e) => setDays(e.value || 0)}
+                    className="w-100"
+                    inputClassName="w-100"
+                    showButtons
+                    allowEmpty={false}
                   />
                 </div>
               </div>
@@ -155,37 +164,37 @@ function SearchBar({ onSearch }: SearchBarProps) {
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
-              onClick={() => setDestination("CIA")}
+              onClick={() => setDestination(["CIA"])}
             >
-              Rome [CIA]
+              🇮🇹 Rome [CIA]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
-              onClick={() => setDestination("BCN")}
+              onClick={() => setDestination(["BCN"])}
             >
-              Barcelona [BCN]
+              🇪🇸 Barcelona [BCN]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
-              onClick={() => setDestination("STN")}
+              onClick={() => setDestination(["STN"])}
             >
-              London [STN]
+              🇬🇧 London [STN]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
-              onClick={() => setDestination("MRS")}
+              onClick={() => setDestination(["MRS"])}
             >
-              Marseille [MRS]
+              🇫🇷 Marseille [MRS]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
-              onClick={() => setDestination("PRG")}
+              onClick={() => setDestination(["PRG"])}
             >
-              Prague [PRG]
+              🇨🇿 Prague [PRG]
             </Badge>
           </div>
           <div className="col-12 col-md-3">
