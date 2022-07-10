@@ -23,9 +23,6 @@ function App() {
       searchParams.days +
       1;
 
-    // eslint-disable-next-line no-console
-    console.log(searchParams);
-
     setDestination(searchParams.destinationAirports);
 
     const searchQueue: SearchAPIParams[] = [];
@@ -92,11 +89,12 @@ function App() {
               {status === SearchStatus.FAILURE && (
                 <h4 className="text-center mt-3">🤷‍♀️ Something went wrong...</h4>
               )}
-              {status === SearchStatus.SUCCESS && results.length === 0 && (
-                <h4 className="text-center mt-3">
-                  Nothing found, change criteria and try again 🍸
-                </h4>
-              )}
+              {status === SearchStatus.SUCCESS &&
+                sortedResults.length === 0 && (
+                  <h4 className="text-center mt-3">
+                    Nothing found, change criteria and try again 🍸
+                  </h4>
+                )}
             </div>
           </div>
         </div>
