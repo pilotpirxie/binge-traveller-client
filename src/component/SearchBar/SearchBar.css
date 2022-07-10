@@ -25,6 +25,15 @@ input, select,
     padding: 8px 4px;
 }
 
+.p-multiselect-panel, .p-multiselect-header {
+    border-radius: 8px!important;
+}
+
+.p-multiselect-panel .p-multiselect-header .p-multiselect-filter-container .p-inputtext {
+    background-color: transparent!important;
+    font-size: 16px!important;
+}
+
 input::placeholder, select::placeholder {
     color: rgba(68, 68, 68, 1)!important;
 }

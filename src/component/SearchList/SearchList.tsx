@@ -8,16 +8,8 @@ export type SearchListProps = {
 };
 
 function SearchList({ trips }: SearchListProps) {
-  const getBookingLink = (trip: Trip) => {
-    window.open(
-      `https://www.ryanair.com/pl/pl/trip/flights/select?adults=1&dateOut=${dayjs(
-        trip.outbound.date
-      ).format("YYYY-MM-DD")}&dateIn=${dayjs(trip.inbound.date).format(
-        "YYYY-MM-DD"
-      )}&isReturn=true&originIata=${trip.origin.airport}&destinationIata=${
-        trip.destination.airport
-      }`
-    );
+  const openBookingLink = (url: string) => {
+    window.open(url, "_blank");
   };
   return (
     <div className="container-fluid m-0 p-0 mt-4">
@@ -25,7 +17,7 @@ function SearchList({ trips }: SearchListProps) {
         <div className="col-12 m-0 p-0">
           <div className="d-block d-md-none p-4">
             {trips.map((trip) => (
-              <div className="card shadow border-0 mt-3">
+              <div className="card shadow border-0 mt-3" key={trip.bookingUrl}>
                 <div className="card-body">
                   <div className="small fw-bold">Dokąd?</div>
                   <div>{trip.destination.country}</div>
@@ -41,9 +33,6 @@ function SearchList({ trips }: SearchListProps) {
                     🛬 {dayjs(trip.inbound.date).format("YYYY-MM-DD HH:mm")}
                   </div>
 
-                  <div className="small mt-2 fw-bold">Na ile?</div>
-                  <div className="small">{trip.tripDurationDays} days</div>
-
                   <div className="small mt-2 fw-bold">Cena</div>
                   <div className="small">
                     {trip.price.value} {trip.price.currency}
@@ -51,7 +40,7 @@ function SearchList({ trips }: SearchListProps) {
 
                   <div
                     className="btn search-list-btn mt-2 form-control"
-                    onClick={() => getBookingLink(trip)}
+                    onClick={() => openBookingLink(trip.bookingUrl)}
                   >
                     Book flight 🛍
                   </div>
@@ -61,7 +50,7 @@ function SearchList({ trips }: SearchListProps) {
           </div>
           <ListGroup className="overflow-auto d-none d-md-block">
             {trips.map((trip) => (
-              <ListGroupItem className="border-0">
+              <ListGroupItem className="border-0" key={trip.bookingUrl}>
                 <div className="container">
                   <div className="row">
                     <div className="col-3">
@@ -87,7 +76,7 @@ function SearchList({ trips }: SearchListProps) {
                     <div className="col-3 d-flex justify-content-end">
                       <div
                         className="btn search-list-btn"
-                        onClick={() => getBookingLink(trip)}
+                        onClick={() => openBookingLink(trip.bookingUrl)}
                       >
                         Book flight 🛍
                       </div>

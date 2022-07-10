@@ -8,13 +8,17 @@ import { InputNumber } from "primereact/inputnumber";
 import Logo from "../Logo/Logo";
 import airports from "../../data/airports.json";
 import flags from "../../data/flags.json";
+import { setDays } from "../../reducers/searchOptions";
+import { useAppDispatch, useAppSelector } from "../../utils/store";
 
 export type SearchParams = {
-  originAirport: Array<string>;
-  destinationAirport: Array<string>;
+  originAirports: string[];
+  destinationAirport: string[];
   dateFrom: Date;
   dateTo: Date;
   days: number;
+  numberOfAdults: number;
+  airlines: string[];
 };
 
 export type SearchBarProps = {
@@ -26,15 +30,19 @@ function SearchBar({ onSearch }: SearchBarProps) {
   const [destination, setDestination] = useState<Array<string>>([]);
   const [dateFrom, setDateFrom] = useState<Date>(dayjs().toDate());
   const [dateTo, setDateTo] = useState<Date>(dayjs().add(1, "day").toDate());
-  const [days, setDays] = useState(1);
+
+  const dispatch = useAppDispatch();
+  const days = useAppSelector((state) => state.searchOptions.days);
 
   const handleSearchClick = () => {
     onSearch({
       days,
       dateFrom,
       dateTo,
-      originAirport: departure,
+      originAirports: departure,
       destinationAirport: destination,
+      airlines: ["RYR"],
+      numberOfAdults: 1,
     });
   };
 
@@ -146,7 +154,7 @@ function SearchBar({ onSearch }: SearchBarProps) {
                     step={1}
                     value={days}
                     required
-                    onChange={(e) => setDays(e.value || 0)}
+                    onChange={(e) => dispatch(setDays({ days: e.value || 0 }))}
                     className="w-100"
                     inputClassName="w-100"
                     showButtons
