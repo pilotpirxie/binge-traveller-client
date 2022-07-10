@@ -93,6 +93,7 @@ function SearchBar({ onSearch }: SearchBarProps) {
                     showSelectAll={false}
                     className="w-100 border-0"
                     filterPlaceholder="Search for departure airport"
+                    showClear
                   />
                 </div>
               </div>
@@ -107,13 +108,13 @@ function SearchBar({ onSearch }: SearchBarProps) {
                     onChange={(e) => {
                       dispatch(setDestinationAirports({ airports: e.value }));
                     }}
-                    placeholder="Optional"
+                    placeholder="Everywhere"
                     display="chip"
                     filter
-                    selectionLimit={3}
                     showSelectAll={false}
                     className="w-100 border-0"
                     filterPlaceholder="Search for destination airport"
+                    showClear
                   />
                 </div>
               </div>

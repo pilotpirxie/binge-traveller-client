@@ -14,3 +14,7 @@
 .list-group-item:nth-child(odd) {
     background: #F8F8F8;
 }
+
+.airline-logo {
+    max-height: 48px;
+}

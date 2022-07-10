@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import "primereact/resources/themes/saga-green/theme.css";
 import "primereact/resources/primereact.min.css";
@@ -13,12 +13,15 @@ import { getTrips } from "../../sagas/data";
 
 function App() {
   const dispatch = useAppDispatch();
+  const [destination, setDestination] = useState<string[]>([]);
 
   const handleSearch = async (searchParams: SearchParams) => {
     const datesToCheck =
       dayjs(searchParams.dateTo).diff(searchParams.dateFrom, "day") -
       searchParams.days +
       1;
+
+    setDestination(searchParams.destinationAirports);
 
     const searchQueue: SearchAPIParams[] = [];
     searchParams.originAirports.forEach((originAirport) => {
@@ -44,9 +47,13 @@ function App() {
   const results = useAppSelector((state) => state.searchResults.results);
   const progress = useAppSelector((state) => state.searchResults.progress);
 
-  const sortedResults = [...results].sort(
-    (a, b) => a.price.value - b.price.value
-  );
+  const sortedResults = [...results]
+    .filter(
+      (result) =>
+        destination.indexOf(result.destination.airport) > -1 ||
+        destination.length === 0
+    )
+    .sort((a, b) => a.price.value - b.price.value);
 
   return (
     <div className="">
