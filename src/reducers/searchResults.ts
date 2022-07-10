@@ -31,7 +31,7 @@ const initialState: {
 type SetQueuePayloadAction = { queue: SearchAPIParams[] };
 type SetQueueIndexPayloadAction = { index: number };
 type AddResultsPayloadAction = { results: Trip[] };
-type SetStatePayloadAction = { status: SearchStatus };
+type SetStatusPayloadAction = { status: SearchStatus };
 
 export const searchResults = createSlice({
   name: "searchResults",
@@ -61,18 +61,18 @@ export const searchResults = createSlice({
         return { payload };
       },
     },
-    setState: {
-      reducer(state, action: PayloadAction<SetStatePayloadAction>) {
+    setStatus: {
+      reducer(state, action: PayloadAction<SetStatusPayloadAction>) {
         state.status = action.payload.status;
       },
-      prepare(payload: SetStatePayloadAction) {
+      prepare(payload: SetStatusPayloadAction) {
         return { payload };
       },
     },
   },
 });
 
-export const { setQueue, setQueueIndex, setState, addResults } =
+export const { setQueue, setQueueIndex, setStatus, addResults } =
   searchResults.actions;
 
 export default searchResults.reducer;
