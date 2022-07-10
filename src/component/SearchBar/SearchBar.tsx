@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SearchBar.css";
 import { Badge, Button } from "reactstrap";
 import dayjs from "dayjs";
@@ -8,12 +8,18 @@ import { InputNumber } from "primereact/inputnumber";
 import Logo from "../Logo/Logo";
 import airports from "../../data/airports.json";
 import flags from "../../data/flags.json";
-import { setDays } from "../../reducers/searchOptions";
+import {
+  setDateFrom,
+  setDateTo,
+  setDays,
+  setDestinationAirports,
+  setOriginAirports,
+} from "../../reducers/searchOptions";
 import { useAppDispatch, useAppSelector } from "../../utils/store";
 
 export type SearchParams = {
   originAirports: string[];
-  destinationAirport: string[];
+  destinationAirports: string[];
   dateFrom: Date;
   dateTo: Date;
   days: number;
@@ -26,21 +32,24 @@ export type SearchBarProps = {
 };
 
 function SearchBar({ onSearch }: SearchBarProps) {
-  const [departure, setDeparture] = useState<Array<string>>([]);
-  const [destination, setDestination] = useState<Array<string>>([]);
-  const [dateFrom, setDateFrom] = useState<Date>(dayjs().toDate());
-  const [dateTo, setDateTo] = useState<Date>(dayjs().add(1, "day").toDate());
-
   const dispatch = useAppDispatch();
   const days = useAppSelector((state) => state.searchOptions.days);
+  const dateFrom = useAppSelector((state) => state.searchOptions.dateFrom);
+  const dateTo = useAppSelector((state) => state.searchOptions.dateTo);
+  const originAirports = useAppSelector(
+    (state) => state.searchOptions.originAirports
+  );
+  const destinationAirports = useAppSelector(
+    (state) => state.searchOptions.destinationAirports
+  );
 
   const handleSearchClick = () => {
     onSearch({
       days,
       dateFrom,
       dateTo,
-      originAirports: departure,
-      destinationAirport: destination,
+      originAirports,
+      destinationAirports,
       airlines: ["RYR"],
       numberOfAdults: 1,
     });
@@ -72,10 +81,10 @@ function SearchBar({ onSearch }: SearchBarProps) {
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
                   <div className="mb-3">Departure 🛫</div>
                   <MultiSelect
-                    value={departure}
+                    value={originAirports}
                     options={airportsItems}
                     onChange={(e) => {
-                      setDeparture(e.value);
+                      dispatch(setOriginAirports({ airports: e.value }));
                     }}
                     placeholder="Select"
                     display="chip"
@@ -93,10 +102,10 @@ function SearchBar({ onSearch }: SearchBarProps) {
                 <div className="card-body d-flex flex-column align-items-center justify-content-center">
                   <div className="mb-3">Destination 🛬</div>
                   <MultiSelect
-                    value={destination}
+                    value={destinationAirports}
                     options={airportsItems}
                     onChange={(e) => {
-                      setDestination(e.value);
+                      dispatch(setDestinationAirports({ airports: e.value }));
                     }}
                     placeholder="Optional"
                     display="chip"
@@ -121,7 +130,9 @@ function SearchBar({ onSearch }: SearchBarProps) {
                     required
                     selectionMode="single"
                     dateFormat="yy-mm-dd"
-                    onChange={(e) => setDateFrom(e.value as Date)}
+                    onChange={(e) =>
+                      dispatch(setDateFrom({ date: e.value as Date }))
+                    }
                   />
                 </div>
               </div>
@@ -138,7 +149,9 @@ function SearchBar({ onSearch }: SearchBarProps) {
                     required
                     selectionMode="single"
                     dateFormat="yy-mm-dd"
-                    onChange={(e) => setDateTo(e.value as Date)}
+                    onChange={(e) =>
+                      dispatch(setDateTo({ date: e.value as Date }))
+                    }
                   />
                 </div>
               </div>
@@ -172,35 +185,45 @@ function SearchBar({ onSearch }: SearchBarProps) {
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
-              onClick={() => setDestination(["CIA"])}
+              onClick={() =>
+                dispatch(setDestinationAirports({ airports: ["CIA"] }))
+              }
             >
               🇮🇹 Rome [CIA]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
-              onClick={() => setDestination(["BCN"])}
+              onClick={() =>
+                dispatch(setDestinationAirports({ airports: ["BCN"] }))
+              }
             >
               🇪🇸 Barcelona [BCN]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
-              onClick={() => setDestination(["STN"])}
+              onClick={() =>
+                dispatch(setDestinationAirports({ airports: ["STN"] }))
+              }
             >
               🇬🇧 London [STN]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
-              onClick={() => setDestination(["MRS"])}
+              onClick={() =>
+                dispatch(setDestinationAirports({ airports: ["MRS"] }))
+              }
             >
               🇫🇷 Marseille [MRS]
             </Badge>
             <Badge
               color="white"
               className="fs-6 text-black me-2 search-suggestion mb-2 mb-lg-0"
-              onClick={() => setDestination(["PRG"])}
+              onClick={() =>
+                dispatch(setDestinationAirports({ airports: ["PRG"] }))
+              }
             >
               🇨🇿 Prague [PRG]
             </Badge>

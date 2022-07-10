@@ -10,7 +10,7 @@ const initialState: {
   airlines: string[];
   numberOfPassengers: 1;
 } = {
-  days: 0,
+  days: 1,
   dateFrom: dayjs().toDate(),
   dateTo: dayjs().add(1, "day").toDate(),
   originAirports: [],
@@ -20,6 +20,8 @@ const initialState: {
 };
 
 type SetDaysPayloadAction = { days: number };
+type SetDatePayloadAction = { date: Date };
+type SetAirportsPayloadAction = { airports: string[] };
 
 export const searchOptions = createSlice({
   name: "searchOptions",
@@ -33,9 +35,47 @@ export const searchOptions = createSlice({
         return { payload };
       },
     },
+    setDateFrom: {
+      reducer(state, action: PayloadAction<SetDatePayloadAction>) {
+        state.dateFrom = action.payload.date;
+      },
+      prepare(payload: SetDatePayloadAction) {
+        return { payload };
+      },
+    },
+    setDateTo: {
+      reducer(state, action: PayloadAction<SetDatePayloadAction>) {
+        state.dateTo = action.payload.date;
+      },
+      prepare(payload: SetDatePayloadAction) {
+        return { payload };
+      },
+    },
+    setOriginAirports: {
+      reducer(state, action: PayloadAction<SetAirportsPayloadAction>) {
+        state.originAirports = action.payload.airports;
+      },
+      prepare(payload: SetAirportsPayloadAction) {
+        return { payload };
+      },
+    },
+    setDestinationAirports: {
+      reducer(state, action: PayloadAction<SetAirportsPayloadAction>) {
+        state.destinationAirports = action.payload.airports;
+      },
+      prepare(payload: SetAirportsPayloadAction) {
+        return { payload };
+      },
+    },
   },
 });
 
-export const { setDays } = searchOptions.actions;
+export const {
+  setDays,
+  setDestinationAirports,
+  setOriginAirports,
+  setDateTo,
+  setDateFrom,
+} = searchOptions.actions;
 
 export default searchOptions.reducer;
