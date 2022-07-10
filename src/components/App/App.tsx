@@ -17,9 +17,14 @@ function App() {
 
   const handleSearch = async (searchParams: SearchParams) => {
     const datesToCheck =
-      dayjs(searchParams.dateTo).diff(searchParams.dateFrom, "day") -
+      Math.round(
+        dayjs(searchParams.dateTo).diff(searchParams.dateFrom, "day", true)
+      ) -
       searchParams.days +
       1;
+
+    // eslint-disable-next-line no-console
+    console.log(searchParams);
 
     setDestination(searchParams.destinationAirports);
 
@@ -31,8 +36,10 @@ function App() {
             airline,
             originAirport,
             numberOfAdults: searchParams.numberOfAdults,
-            outbound: dayjs(searchParams.dateFrom).add(i, "day").toDate(),
-            inbound: dayjs(searchParams.dateFrom)
+            outbound: dayjs(searchParams.dateFrom.toLocaleString())
+              .add(i, "day")
+              .toDate(),
+            inbound: dayjs(searchParams.dateFrom.toLocaleString())
               .add(i + searchParams.days, "day")
               .toDate(),
           });

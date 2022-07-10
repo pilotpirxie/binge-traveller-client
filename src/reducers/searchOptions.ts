@@ -15,7 +15,7 @@ const initialState: {
   dateTo: dayjs().add(1, "day").toDate(),
   originAirports: [],
   destinationAirports: [],
-  airlines: ["RYR"],
+  airlines: ["RYR", "WZZ", "EZZ"],
   numberOfPassengers: 1,
 };
 
