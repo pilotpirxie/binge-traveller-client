@@ -18,18 +18,15 @@ export type SearchAPIParams = {
 
 const initialState: {
   results: Trip[];
-  queue: SearchAPIParams[];
-  queueIndex: number;
+  progress: number;
   status: SearchStatus;
 } = {
-  queue: [],
-  queueIndex: 0,
+  progress: 0,
   results: [],
   status: SearchStatus.INITIAL,
 };
 
-type SetQueuePayloadAction = { queue: SearchAPIParams[] };
-type SetQueueIndexPayloadAction = { index: number };
+type SetProgressPayloadAction = { progress: number };
 type AddResultsPayloadAction = { results: Trip[] };
 type SetStatusPayloadAction = { status: SearchStatus };
 
@@ -37,14 +34,6 @@ export const searchResults = createSlice({
   name: "searchResults",
   initialState,
   reducers: {
-    setQueue: {
-      reducer(state, action: PayloadAction<SetQueuePayloadAction>) {
-        state.queue = action.payload.queue;
-      },
-      prepare(payload: SetQueuePayloadAction) {
-        return { payload };
-      },
-    },
     addResults: {
       reducer(state, action: PayloadAction<AddResultsPayloadAction>) {
         state.results.push(...action.payload.results);
@@ -53,11 +42,11 @@ export const searchResults = createSlice({
         return { payload };
       },
     },
-    setQueueIndex: {
-      reducer(state, action: PayloadAction<SetQueueIndexPayloadAction>) {
-        state.queueIndex = action.payload.index;
+    setProgress: {
+      reducer(state, action: PayloadAction<SetProgressPayloadAction>) {
+        state.progress = action.payload.progress;
       },
-      prepare(payload: SetQueueIndexPayloadAction) {
+      prepare(payload: SetProgressPayloadAction) {
         return { payload };
       },
     },
@@ -72,7 +61,6 @@ export const searchResults = createSlice({
   },
 });
 
-export const { setQueue, setQueueIndex, setStatus, addResults } =
-  searchResults.actions;
+export const { setProgress, setStatus, addResults } = searchResults.actions;
 
 export default searchResults.reducer;
