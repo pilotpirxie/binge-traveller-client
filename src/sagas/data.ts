@@ -3,6 +3,7 @@ import { put } from "redux-saga/effects";
 import { Trip } from "../types/Fares";
 import {
   addResults,
+  clearResults,
   SearchAPIParams,
   SearchStatus,
   setProgress,
@@ -29,11 +30,16 @@ export const getTrips = (
   },
 });
 
+export const sleep = (ms: number) =>
+  // eslint-disable-next-line no-promise-executor-return
+  new Promise((resolve) => setTimeout(resolve, ms));
+
 export function* getTripsSaga(action: GetTripsSagaAction) {
   try {
     yield put(setStatus({ status: SearchStatus.PENDING }));
-
+    yield put(clearResults({}));
     for (let i = 0; i < action.payload.queue.length; i++) {
+      yield sleep(500);
       yield put(
         setProgress({
           progress: Math.round((i / action.payload.queue.length) * 100),

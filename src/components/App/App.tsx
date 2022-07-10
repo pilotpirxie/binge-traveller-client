@@ -44,6 +44,10 @@ function App() {
   const results = useAppSelector((state) => state.searchResults.results);
   const progress = useAppSelector((state) => state.searchResults.progress);
 
+  const sortedResults = [...results].sort(
+    (a, b) => a.price.value - b.price.value
+  );
+
   return (
     <div className="">
       <div>
@@ -82,7 +86,7 @@ function App() {
             </div>
           </div>
         </div>
-        <SearchList trips={results} />
+        <SearchList trips={sortedResults} />
       </div>
     </div>
   );

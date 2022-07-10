@@ -42,6 +42,14 @@ export const searchResults = createSlice({
         return { payload };
       },
     },
+    clearResults: {
+      reducer(state) {
+        state.results = [];
+      },
+      prepare(payload) {
+        return { payload };
+      },
+    },
     setProgress: {
       reducer(state, action: PayloadAction<SetProgressPayloadAction>) {
         state.progress = action.payload.progress;
@@ -61,6 +69,7 @@ export const searchResults = createSlice({
   },
 });
 
-export const { setProgress, setStatus, addResults } = searchResults.actions;
+export const { setProgress, clearResults, setStatus, addResults } =
+  searchResults.actions;
 
 export default searchResults.reducer;
