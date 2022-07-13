@@ -17,7 +17,7 @@ function App() {
 
   const handleSearch = async (searchParams: SearchParams) => {
     const datesToCheck =
-      Math.round(
+      Math.ceil(
         dayjs(searchParams.dateTo).diff(searchParams.dateFrom, "day", true)
       ) -
       searchParams.days +
@@ -33,10 +33,8 @@ function App() {
             airline,
             originAirport,
             numberOfAdults: searchParams.numberOfAdults,
-            outbound: dayjs(searchParams.dateFrom.toLocaleString())
-              .add(i, "day")
-              .toDate(),
-            inbound: dayjs(searchParams.dateFrom.toLocaleString())
+            outbound: dayjs(searchParams.dateFrom).add(i, "day").toDate(),
+            inbound: dayjs(searchParams.dateFrom)
               .add(i + searchParams.days, "day")
               .toDate(),
           });
